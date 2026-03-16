@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A private, volunteer-run email service.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="Cabbiemail — Point-to-Point Transit">
+  <meta property="og:description" content="A private, volunteer-run email service.">
+  <meta property="og:type" content="website">
+  <title>Cabbiemail — Point-to-Point Transit</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      box-shadow: none;
+    }
+
+    :root {
+      --bg: #F7F6F2;
+      --text: #111111;
+      --accent: #D9A300;
+      --border: #D6D3CE;
+      --grey: #6B7280;
+      --radius: 4px;
+      --max-width: 600px;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 4rem 1rem 2rem;
+      line-height: 1.5;
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      margin: 0 0 1rem;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--grey);
+    }
+
+    footer,
+    .label,
+    label {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.85rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.3rem;
+      margin-top: 1rem;
+    }
+
+    label:first-child {
+      margin-top: 0;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.5rem 0.6rem;
+      font: inherit;
+      background: #fff;
+      box-shadow: none;
+      outline: none;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border: 2px solid var(--accent);
+      padding: calc(0.5rem - 1px) calc(0.6rem - 1px);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 6rem;
+    }
+
+    button[type="submit"],
+    .btn {
+      margin-top: 1.5rem;
+      background: #111;
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      padding: 0.6rem 1.2rem;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover,
+    .btn:hover {
+      background: #2a2a2a;
+    }
+
+    .panel,
+    form {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    footer {
+      margin-top: 2rem;
+      color: var(--grey);
+    }
+
+    p {
+      margin: 0 0 1rem;
+    }
+
+    .logo {
+      display: block;
+      max-width: 160px;
+      margin: 0 auto 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img src="/assets/logo.png" alt="Cabbiemail" class="logo">
+
+    <h1>Cabbiemail: Point-to-Point Transit</h1>
+
+    <h2>Our Philosophy</h2>
+    <p>Cabbiemail is a straightforward proposition: an email service built on the foundational principles of a proper taxi ride. You get in, we slide the glass partition shut, and we take your messages exactly where they need to go.</p>
+    <p>There are no sponsored detours, no third parties squeezing into the passenger seat, and we certainly don't rifle through the boot to see what you're carrying. We don't track you, and we don't monetise your metadata. It is just clean, unbothered, point-to-point transit.</p>
+
+    <h2>The 'For Hire' Light is Off</h2>
+    <p>Cabbiemail was cobbled together by a few volunteers who simply wanted a quiet, private place to park their digital lives. It is kept on the road entirely by a friendly whip-round among our existing users to keep the servers ticking over.</p>
+    <p>The service works brilliantly, but we have absolutely no intention of scaling it up. Turning this into a massive public platform would mean dealing with support tickets, drafting endless terms of service, and, worst of all, interacting with the general public. Frankly, that sounds like a tremendous amount of faff.</p>
+    <p>Consequently, we aren't taking anyone off the rank. The registration ledger is locked in the glovebox, and we do not maintain a waiting list. We have enough passengers, the meter is off, and we are perfectly happy driving with the doors locked. If you already have an account, in you get.</p>
+
+    <form>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required autocomplete="email">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required autocomplete="current-password">
+      <button type="submit">[ Sign In ]</button>
+    </form>
+
+    <footer><span style="color: #2E7D32; font-size: 0.72rem;">●</span> All systems operational<br>Please do not contact us asking for an account. The inbox is unmonitored.</footer>
+  </main>
+  <script>
+    (function () {
+      const form = document.querySelector("form");
+      const emailInput = document.getElementById("email");
+      const passwordInput = document.getElementById("password");
+      const passwordLabel = document.querySelector('label[for="password"]');
+      const submitBtn = form.querySelector('button[type="submit"]');
+
+      let csrfToken = null;
+      let totpPhase = false;
+
+      // Error element
+      const errorEl = document.createElement("p");
+      errorEl.style.cssText =
+        'color:red;font-family:"JetBrains Mono",monospace;font-size:0.85rem;margin:1rem 0 0;display:none';
+      submitBtn.insertAdjacentElement("afterend", errorEl);
+
+      function showError(msg) {
+        errorEl.textContent = msg;
+        errorEl.style.display = "block";
+      }
+
+      function clearError() {
+        errorEl.style.display = "none";
+        errorEl.textContent = "";
+      }
+
+      // Fetch CSRF token on load
+      fetch("/api/csrf")
+        .then((r) => r.json())
+        .then((data) => {
+          csrfToken = data.csrf_token;
+        })
+        .catch(() => {
+          submitBtn.disabled = true;
+          showError("System error. Try again later.");
+        });
+
+      // TOTP input (created once, inserted when needed)
+      const totpLabel = document.createElement("label");
+      totpLabel.setAttribute("for", "totp");
+      totpLabel.textContent = "TOTP Code";
+
+      const totpInput = document.createElement("input");
+      totpInput.type = "text";
+      totpInput.id = "totp";
+      totpInput.name = "totp";
+      totpInput.inputMode = "numeric";
+      totpInput.pattern = "[0-9]*";
+      totpInput.maxLength = 6;
+      totpInput.required = true;
+      totpInput.autocomplete = "one-time-code";
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        clearError();
+
+        const headers = {
+          "Content-Type": "application/json",
+          "x-csrf-token": csrfToken,
+        };
+
+        try {
+          let body;
+          if (totpPhase) {
+            body = JSON.stringify({ email: emailInput.value, totp: totpInput.value });
+          } else {
+            body = JSON.stringify({ email: emailInput.value, password: passwordInput.value });
+          }
+
+          const res = await fetch("/api/auth", { method: "POST", headers, body });
+          const data = await res.json();
+
+          if (res.status === 401) {
+            showError("Invalid credentials.");
+            return;
+          }
+
+          if (data.next_step === "totp_required" && !totpPhase) {
+            // Transition to TOTP phase
+            totpPhase = true;
+            passwordLabel.style.display = "none";
+            passwordInput.style.display = "none";
+            passwordInput.required = false;
+            passwordLabel.insertAdjacentElement("afterend", totpInput);
+            passwordLabel.insertAdjacentElement("afterend", totpLabel);
+            submitBtn.textContent = "[ Verify Code ]";
+            totpInput.focus();
+            return;
+          }
+
+          // Any other 200 — just show invalid credentials (loop back)
+          showError("Invalid credentials.");
+        } catch {
+          showError("System error. Try again later.");
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
