@@ -77,7 +77,6 @@ Wrangler is included as a dev dependency and does not need to be installed globa
 3. Configure build settings:
    - **Build command:** `npm run build`
    - **Build output directory:** `public`
-   - **Root directory:** `cabbiemail` (the project is nested inside a monorepo)
 4. Click **Deploy**
 
 ### Option B: Direct Upload via Wrangler CLI
