@@ -29,10 +29,11 @@ cabbiemail/
 
 ## Prerequisites
 
-- **Node.js** (LTS recommended) — required for build scripts and the Sharp image library
+- **Node.js ≥ 18** — required for build scripts and the Sharp image library
 - **npm** — ships with Node.js
-- **Wrangler CLI** — install globally (`npm install -g wrangler`) or run via `npx`
 - **Cloudflare account** — needed for deployment (free tier is sufficient)
+
+Wrangler is included as a dev dependency and does not need to be installed globally.
 
 ## Getting Started (Local Development)
 
@@ -53,7 +54,7 @@ cabbiemail/
 4. Start a local dev server with Pages Functions support:
 
    ```sh
-   npx wrangler pages dev public/ --port 8788
+   npm run dev
    ```
 
 5. Open `http://localhost:8788` in your browser.
@@ -62,6 +63,7 @@ cabbiemail/
 
 | Command                  | Description                                              |
 |--------------------------|----------------------------------------------------------|
+| `npm run dev`            | Start local dev server (Wrangler Pages, port 8788)       |
 | `npm run build`          | Full production build (fonts + assets)                   |
 | `npm run build:assets`   | Optimise and resize source images only                   |
 | `npm run download:fonts` | Download web fonts from Google Fonts                     |

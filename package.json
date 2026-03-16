@@ -2,12 +2,17 @@
   "name": "cabbiemail",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
+    "dev": "wrangler pages dev public/ --port 8788",
     "download:fonts": "node scripts/download-fonts.js",
     "build:assets": "node scripts/build-assets.js",
     "build": "npm run download:fonts && npm run build:assets"
   },
   "devDependencies": {
-    "sharp": "^0.34.5"
+    "sharp": "^0.34.5",
+    "wrangler": "^4.0.0"
   }
 }
